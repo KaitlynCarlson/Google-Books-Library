@@ -1,5 +1,5 @@
 {
-  "name": "Google Books Library",
+  "name": "books",
   "version": "1.0.0",
   "description": "Search and save books from Google Play Store",
   "main": "server.js",
