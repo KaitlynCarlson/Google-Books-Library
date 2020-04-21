@@ -4,7 +4,7 @@ function Search() {
   return (
     <form id="discoverForm">
       <div class="form-group">
-        <label for="bookSearch">Discover new books today</label>
+        <label for="bookSearch">Uncharted worlds and words await you</label>
         <input type="text" class="form-control" id="bookSearch" />
       </div>
       <button type="submit" class="btn btn-primary">

@@ -9,7 +9,7 @@ function Jumbotron() {
         <h1 className="display-4">Discover</h1>
         <p className="lead">Search books available on Google Play Store</p>
       </div>
-      <hr />
+      <hr id="break" />
       <Search />
     </div>
   );
