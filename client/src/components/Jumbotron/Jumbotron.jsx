@@ -1,4 +1,5 @@
 import React from "react";
+import Search from "../Search/Search";
 import "./style.css";
 
 function Jumbotron() {
@@ -8,6 +9,8 @@ function Jumbotron() {
         <h1 className="display-4">Discover</h1>
         <p className="lead">Search books available on Google Play Store</p>
       </div>
+      <hr />
+      <Search />
     </div>
   );
 }
