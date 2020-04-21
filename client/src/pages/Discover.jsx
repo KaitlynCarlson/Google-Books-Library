@@ -16,12 +16,16 @@ class Discover extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Jumbotron />
-        <Search
+        <Jumbotron
           name="search"
           value={this.state.search}
           onChange={this.handleInputChange}
         />
+        {/* <Search
+          name="search"
+          value={this.state.search}
+          onChange={this.handleInputChange}
+        /> */}
       </React.Fragment>
     );
   }
