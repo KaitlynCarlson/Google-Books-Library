@@ -1,6 +1,6 @@
 import React from "react";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
-import Search from "../components/Search/Search";
+import Results from "../components/Results/Results";
 class Discover extends React.Component {
   state = {
     results: {},
@@ -21,11 +21,7 @@ class Discover extends React.Component {
           value={this.state.search}
           onChange={this.handleInputChange}
         />
-        {/* <Search
-          name="search"
-          value={this.state.search}
-          onChange={this.handleInputChange}
-        /> */}
+        <Results />
       </React.Fragment>
     );
   }

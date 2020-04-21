@@ -2,7 +2,6 @@ import React from "react";
 import Nav from "./components/Nav/Nav";
 import Discover from "./pages/Discover";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
 import "./App.css";
 
 function App() {
