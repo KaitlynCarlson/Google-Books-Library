@@ -1,13 +1,21 @@
 import React from "react";
 import "./style.css";
-function Search() {
+function Search(props) {
   return (
     <form id="discoverForm">
-      <div class="form-group">
+      <div className="form-group">
         <label for="bookSearch">Uncharted worlds and words await you</label>
-        <input type="text" class="form-control" id="bookSearch" />
+        <input
+          type="text"
+          className="form-control"
+          id="bookSearch"
+          name="search"
+          value={props.search}
+          onChange={props.handleInputChange}
+          placeholder="Book Title"
+        />
       </div>
-      <button type="submit" class="btn btn-primary">
+      <button type="submit" className="btn btn-primary">
         Submit
       </button>
     </form>

@@ -10,7 +10,6 @@ function Jumbotron() {
         <p className="lead">Search books available on Google Play Store</p>
       </div>
       <hr id="break" />
-      <Search />
     </div>
   );
 }
