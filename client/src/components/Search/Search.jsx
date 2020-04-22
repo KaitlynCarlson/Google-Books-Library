@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-function Search(props) {
+function Search({ handleInputChange, searchBook, name, value }) {
   return (
     <form id="discoverForm">
       <div className="form-group">
@@ -9,11 +9,13 @@ function Search(props) {
           type="text"
           className="form-control"
           id="bookSearch"
-          {...props}
+          name={name}
+          value={value}
+          onChange={handleInputChange}
           placeholder="Book Title"
         />
       </div>
-      <button type="submit" className="btn btn-primary">
+      <button type="submit" onClick={searchBook} className="btn btn-primary">
         Submit
       </button>
     </form>
