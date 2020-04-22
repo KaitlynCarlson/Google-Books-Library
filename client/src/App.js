@@ -12,16 +12,8 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/" component={Discover} />
-          <Route
-            exact
-            path="https://googlebookslibrary.herokuapp.com/discover"
-            component={Discover}
-          />
-          <Route
-            exact
-            path="https://googlebookslibrary.herokuapp.com/library"
-            component={Library}
-          />
+          <Route path="/discover" component={Discover} />
+          <Route path="/library" component={Library} />
         </Switch>
       </div>
     </Router>
