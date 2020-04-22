@@ -50,7 +50,11 @@ function Results(props) {
                           description: book.volumeInfo.description,
                           image: book.volumeInfo.imageLinks.thumbnail,
                           link: book.volumeInfo.previewLink,
-                        }).catch((err) => console.log(err));
+                        })
+                          .then(() => {
+                            alert(`${book.volumeInfo.title} added to library!`);
+                          })
+                          .catch((err) => console.log(err));
                       }}
                     >
                       Save
