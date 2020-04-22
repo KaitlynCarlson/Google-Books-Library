@@ -25,6 +25,7 @@ class Discover extends React.Component {
   setResults = (data) => {
     this.setState({ results: data.data.items });
   };
+
   render() {
     return (
       <React.Fragment>

@@ -11,6 +11,7 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/" component={Discover} />
+          <Route exact path="/discover" component={Discover} />
         </Switch>
       </div>
     </Router>

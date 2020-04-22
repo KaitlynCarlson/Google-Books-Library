@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import API from "../../utils/API";
 function Results(props) {
   return (
     <div className="jumbotron jumbotron-fluid" id="Jumbo">
@@ -18,7 +19,7 @@ function Results(props) {
                 <div className="row">
                   <div className="col-lg-4 col-md-4 col-sm-12">
                     <img
-                      alt="Book Image"
+                      alt="Book Cover"
                       src={book.volumeInfo.imageLinks.smallThumbnail}
                     />
                   </div>
@@ -29,9 +30,7 @@ function Results(props) {
                       type="button"
                       id={book.id}
                       className="btn btn-primary moreButton"
-                      onClick={() =>
-                        window.open(book.volumeInfo.canonicalVolumeLink)
-                      }
+                      onClick={() => window.open(book.volumeInfo.previewLink)}
                     >
                       View
                     </button>
@@ -39,6 +38,20 @@ function Results(props) {
                       type="button"
                       id={book.id}
                       className="btn btn-success moreButton "
+                      onClick={(event) => {
+                        const bookID = event.target.id;
+                        const book = props.results.find(
+                          (book) => book.id === bookID
+                        );
+                        console.log(book);
+                        API.saveBook({
+                          title: book.volumeInfo.title,
+                          author: book.volumeInfo.authors,
+                          description: book.volumeInfo.description,
+                          image: book.volumeInfo.imageLinks.thumbnail,
+                          link: book.volumeInfo.previewLink,
+                        }).catch((err) => console.log(err));
+                      }}
                     >
                       Save
                     </button>
