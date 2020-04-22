@@ -12,8 +12,8 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/" component={Discover} />
-          <Route path="/discover" component={Discover} />
-          <Route path="/library" component={Library} />
+          <Route exact path="/discover" component={Discover} />
+          <Route exact path="/library" component={Library} />
         </Switch>
       </div>
     </Router>
