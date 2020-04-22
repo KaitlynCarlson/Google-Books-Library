@@ -18,8 +18,19 @@ class Library extends React.Component {
       )
       .catch((err) => console.log(err));
   };
+  deleteBook = (id) => {
+    API.deleteBook(id)
+      .then((res) => this.showLibrary())
+      .catch((err) => console.log(err));
+  };
+
   render() {
-    return <LibraryContainer saved={this.state.library} />;
+    return (
+      <LibraryContainer
+        saved={this.state.library}
+        deleteBook={this.deleteBook}
+      />
+    );
   }
 }
 export default Library;

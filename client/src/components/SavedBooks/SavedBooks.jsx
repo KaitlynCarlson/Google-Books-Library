@@ -28,6 +28,12 @@ function SavedBooks(props) {
                     type="button"
                     id={book._id}
                     className="btn btn-danger moreButton"
+                    onClick={(event) => {
+                      const thisId = event.target.id;
+                      {
+                        props.deleteBook(thisId);
+                      }
+                    }}
                   >
                     Delete
                   </button>

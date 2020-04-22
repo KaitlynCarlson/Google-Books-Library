@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import SavedBooks from "../SavedBooks/SavedBooks";
-function LibraryContainer(props) {
+function LibraryContainer({ saved, deleteBook }) {
   return (
     <div className="jumbotron jumbotron-fluid" id="libraryContainer">
       <div className="container">
@@ -9,7 +9,7 @@ function LibraryContainer(props) {
         <p className="lead">Saved books</p>
       </div>
       <hr id="break2" />
-      <SavedBooks saved={props.saved} />
+      <SavedBooks saved={saved} deleteBook={deleteBook} />
     </div>
   );
 }
