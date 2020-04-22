@@ -3,6 +3,7 @@ import Nav from "./components/Nav/Nav";
 import Discover from "./pages/Discover";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import Library from "./pages/Library";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Discover} />
           <Route exact path="/discover" component={Discover} />
+          <Route exact path="/library" component={Library} />
         </Switch>
       </div>
     </Router>
