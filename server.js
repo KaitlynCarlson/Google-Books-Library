@@ -16,11 +16,15 @@ if (process.env.NODE_ENV === `production`) {
 
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || `mongodb://localhost/googlebooks`, {
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
-  useCreateIndex: true,
-});
+mongoose.connect(
+  process.env.MONGODB_URI ||
+    `mongodb://user1:password1@ds049631.mlab.com:49631/heroku_s2xq6d7p`,
+  {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useCreateIndex: true,
+  }
+);
 app.listen(PORT, () => {
   console.log(`API server up on http://localhost:${PORT}`);
 });
