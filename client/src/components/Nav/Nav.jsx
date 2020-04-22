@@ -3,23 +3,30 @@ import "./style.css";
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light" id="Nav">
-      <a className="navbar-brand" href="/">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">
         Google Books
       </a>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <a className="nav-link" href="/discover">
-              Discover
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="/library">
-              Library
-            </a>
-          </li>
-        </ul>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="/discover">
+            Discover <span class="sr-only">(current)</span>
+          </a>
+          <a class="nav-item nav-link" href="/library">
+            Library
+          </a>
+        </div>
       </div>
     </nav>
   );
