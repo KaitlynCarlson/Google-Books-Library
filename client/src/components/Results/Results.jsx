@@ -20,7 +20,11 @@ function Results(props) {
                   <div className="col-lg-4 col-md-4 col-sm-12">
                     <img
                       alt="Book Cover"
-                      src={book.volumeInfo.imageLinks.smallThumbnail}
+                      src={
+                        book.volumeInfo.imageLinks === undefined
+                          ? "https://via.placeholder.com/150/"
+                          : book.volumeInfo.imageLinks.thumbnail
+                      }
                     />
                   </div>
                   <div className="col-lg-8 col-md-8 col-sm-12">
