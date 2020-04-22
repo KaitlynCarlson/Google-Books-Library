@@ -25,6 +25,23 @@ function Results(props) {
                   <div className="col-lg-8 col-md-8 col-sm-12">
                     <h5 className="card-title">{book.volumeInfo.title}</h5>
                     <p className="card-text">{book.volumeInfo.description}</p>
+                    <button
+                      type="button"
+                      id={book.id}
+                      className="btn btn-primary moreButton"
+                      onClick={() =>
+                        window.open(book.volumeInfo.canonicalVolumeLink)
+                      }
+                    >
+                      View
+                    </button>
+                    <button
+                      type="button"
+                      id={book.id}
+                      className="btn btn-success moreButton "
+                    >
+                      Save
+                    </button>
                   </div>
                 </div>
               </div>
