@@ -1,1 +1,6 @@
-import React from 'react';
+#noResults {
+  text-align: center;
+}
+.card {
+  margin: 5%;
+}

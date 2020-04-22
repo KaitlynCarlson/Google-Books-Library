@@ -4,22 +4,26 @@ import Results from "../components/Results/Results";
 import API from "../utils/API";
 class Discover extends React.Component {
   state = {
-    results: {},
+    results: [],
     search: "",
+  };
+
+  componentDidMount() {
+    this.setState({ results: {}, search: "" });
+  }
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
   };
   searchBook = (event) => {
     event.preventDefault();
 
     API.getTitles(this.state.search)
-      .then((results) => console.log(results))
+      .then((results) => this.setResults(results))
       .catch((err) => console.log(err));
   };
-  componentDidMount() {
-    this.setState({ books: {}, title: "" });
-  }
-  handleInputChange = (event) => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
+  setResults = (data) => {
+    this.setState({ results: data.data.items });
   };
   render() {
     return (
@@ -30,7 +34,7 @@ class Discover extends React.Component {
           handleInputChange={this.handleInputChange}
           searchBook={this.searchBook}
         />
-        <Results />
+        <Results results={this.state.results} /> :
       </React.Fragment>
     );
   }
