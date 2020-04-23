@@ -1,29 +1,64 @@
-# Create React Express App
+# { React } Google Books App
 
-## About This Boilerplate
+{ React } Google Books App enables users to search and save books available on Google Books Store. It is built with a MERN stack, featuring React components utilizing React lifecycle methods to query and display books based on user searches. These books can be viewed in Google Books and saved to the user's Library.
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+Check out the deployed application today on Heroku: [{ React } Google Books App](https://googlebookslibrary.herokuapp.com/discover)
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+![React Google Books App](./READMEAssets/GoogleBooksApp.png)
 
-## Starting the app locally
+## Table of Contents
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+- [Technologies](#Technologies)
+- [Demo](#Demo)
+- [Functionality](#Functionality)
+- [Future Development](#Future-Development)
 
-```
-npm install
-```
+## Technologies
 
-This should install node modules within the server and the client folder.
+This application utilizes a myriad of technologies:
 
-After both installations complete, run the following command in your terminal:
+1. Node.js
+2. MongoDB in conjunction with Mongoose
+3. React
+4. Express
+5. Bootstrap
 
-```
-npm start
-```
+## Demo
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+A demonstration of a user querying a book and saving it to their library:
 
-## Deployment (Heroku)
+![Discover](./READMEAssets/discover.gif)
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+A demonstration of a user's library and deletion of a book:
+
+![Library](./READMEAssets/library.gif)
+
+## Functionality
+
+This application utilizes the full power of the MERN stack in order to function seamlessly for an enjoyable user experience.
+
+The application code is structured as shown in the following image:
+
+![Architecture](./READMEAssets/architecture.png)
+
+Our controller, models, and routes files all funnel through our server.js file and creates the back-end of our application. The back-end of our application enables user's to save and delete books to a MongoDB with the use of Mongoose, Express and Node.js. Through the `package.json` scripts upon `npm run start` the back-end is able to access the front-end of our application:
+
+![Back-end Scripts](./READMEAssets/backendscript.png)
+
+The client folder hosts all of our front-end code. The client package hosts a package with a proxy which enables it to handle and process the functionality of the back-end of our code.
+
+This is a two page application, Discover and Library, through which many components are implemented.
+
+The following is the Discover page components:
+
+![Discover](./READMEAssets/discoverComponents.png)
+
+The following is the Library page components:
+
+![Library](./READMEAssets/libraryComponents.png)
+
+## Future Development
+
+For future development, I would enable users to create an account in order to enable multi-user usability as well as privacy.
+
+I would also incorporate React hooks in order to make the code cleaner and avoid prop drilling.
